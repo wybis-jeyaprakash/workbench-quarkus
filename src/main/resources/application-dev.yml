@@ -3,6 +3,14 @@ quarkus:
     category:
       "io.wybis":
         level: DEBUG
+    file:
+      enable: false
+      level: DEBUG
+      path: ~/dev-home/workbench-quarkus/logs/${app.id}.log
+      async: true
+      rotation:
+        max-file-size: 1M
+
 #  datasource:
 #    db-kind: h2
 #    username: sa

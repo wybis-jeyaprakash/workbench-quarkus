@@ -7,15 +7,6 @@ quarkus:
     category:
       "io.wybis":
         level: INFO
-    console:
-      enable: true
-    file:
-      enable: false
-      level: DEBUG
-      path: c:/Users/319847744/wybis/dev-home/workbench-quarkus/logs/${app.id}.log
-      async: true
-      rotation:
-        max-file-size: 5K
     handler:
       gelf:
         enabled: true
