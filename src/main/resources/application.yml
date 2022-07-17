@@ -1,0 +1,39 @@
+app:
+  id: workbench-quarkus
+  name: Workbench Quarkus
+
+quarkus:
+  log:
+    category:
+      "io.wybis":
+        level: INFO
+    console:
+      enable: true
+    file:
+      enable: false
+      level: DEBUG
+      path: c:/Users/319847744/wybis/dev-home/workbench-quarkus/logs/${app.id}.log
+      async: true
+      rotation:
+        max-file-size: 5K
+    handler:
+      gelf:
+        enabled: true
+        host: localhost
+        port: 12201
+  #       port: 5000
+  http:
+    cors: true
+#    port: 9001
+
+  live-reload:
+    instrumentation: true
+
+  swagger-ui:
+    theme: original
+  #    always-include: true
+
+  smallrye-openapi:
+    info-title: ${app.name} API
+    info-version: 0.0.1
+
